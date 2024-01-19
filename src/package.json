@@ -1,0 +1,13 @@
+{
+  "name": "sdl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist --presets @babel/preset-env,@babel/preset-react"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

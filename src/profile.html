@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GatherGrid</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./multichoose.css">
+</head>
+
+<body>
+    <div id="titlebar" class="navbar">
+        <a href="main.html">
+            <div class="logo"></div>
+        </a>
+        <div class="profile">
+            <a href="profile.html"><i class="fa-solid fa-user" style="color: #f0bb7f;"></i></a>
+        </div>
+
+    </div>
+    <div class="one">
+        <div class="two">
+
+
+            <span class="profop basicinfoop"><a href="#">Basic Information</a></span>
+            <span class="profop skillsop"><a href="#">Skills</a></span>
+            <span class="profop otherop"><a href="#">Others</a></span>
+        </div>
+
+
+        <div class="basicinfo" id="Binfo">
+
+            <form action="https://profile-api-2wkq.onrender.com/profile">
+                <div class="detailcont fn">
+                    <span>Full Name</span>
+                    <input type="text" id="fn">
+                </div>
+
+                <div class="detailcont email">
+                    <span>E-Mail</span>
+                    <input type="text" readonly>
+                </div>
+                <div class="detailcont cn">
+                    <span>Contact Number</span>
+                    <input type="text">
+                </div>
+                <div class="detailcont orga">
+                    <span>Organisation</span>
+                    <input type="text">
+                </div>
+                <div class="genderdetailcont">
+                    <span>Gender</span>
+                    <div class="genderbox">
+                        <input type="radio" name="gender" value="male" class="genra">Male
+                        <input type="radio" name="gender" value="female" class="genra">Female
+                        <input type="radio" name="gender" value="other" class="genra">Other
+                    </div>
+                </div>
+                <div class="coursedetailcont">
+                    <span>Course</span>
+                    <div class="coursebox">
+                        <input type="radio" name="course" value="B.Tech">B.Tech
+                        <input type="radio" name="course" value="M.Tech">M.Tech
+                        <input type="radio" name="course" value="Other">Other
+                    </div>
+                </div>
+                <div class="detailcont sp">
+                    <span>Specialization</span>
+                    <input type="text">
+                </div>
+
+                <button type="submit" class="save">Save</button>
+                <input type="hidden" id="apiUrl" value="https://profile-api-2wkq.onrender.com/profile">
+            </form>
+
+        </div>
+
+        <div class="other active" id="Others">
+            <form action="https://profile-api-2wkq.onrender.com/profile">
+                <div class="linkcontainer">
+                    <span>Linkedin</span>
+                    <input type="text" id="Linkedin" placeholder="Enter Link">
+                </div>
+                <div class="linkcontainer">
+                    <span>Github</span>
+                    <input type="text" id="Github" placeholder="Enter Link">
+                </div>
+                <div class="linkcontainer">
+                    <span>Behance</span>
+                    <input type="text" id="Behance" placeholder="Enter Link">
+                </div>
+                <div class="linkcontainer">
+                    <span>Other</span>
+                    <input type="text" id="other1" placeholder="Enter Link">
+                </div>
+                <button type="submit" class="save">Save</button>
+                <input type="hidden" id="apiUrl" value="https://profile-api-2wkq.onrender.com/profile">
+            </form>
+
+
+        </div>
+
+        <div class="skills active">
+            <span>Skills</span>
+            <form class="detailcont sk" action="https://profile-api-2wkq.onrender.com/profile">
+                <input type="text" id="skillchoose" placeholder="Enter Skills">
+                <!-- <select id="skillchoose" data-placeholder="Begin typing a skill to filter..." multiple
+                    class="chosen-select" name="skills" style="width: 1000px;">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Communication">Communication</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C++">C++</option>
+                    <option value="C#">C#</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="PHP">PHP</option>
+                    <option value="SQL">SQL</option>
+                    <option value="React">React</option>
+                    <option value="Angular">Angular</option>
+                    <option value="Vue.js">Vue.js</option>
+                    <option value="Node.js">Node.js</option>
+                    <option value="Express.js">Express.js</option>
+                    <option value="Django">Django</option>
+                    <option value="Flask">Flask</option>
+                    <option value="Ruby on Rails">Ruby on Rails</option>
+                    <option value="ASP.NET">ASP.NET</option>
+                    <option value="Spring Framework">Spring Framework</option>
+                    <option value="Xamarin">Xamarin</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Kotlin">Kotlin</option>
+                    <option value="Dart">Dart</option>
+                    <option value="Go">Go</option>
+                    <option value="Rust">Rust</option>
+                    <option value="TypeScript">TypeScript</option>
+                    <option value="GraphQL">GraphQL</option>
+                    <option value="RESTful API Design">RESTful API Design</option>
+                    <option value="Responsive Web Design">Responsive Web Design</option>
+                    <option value="Mobile App Development">Mobile App Development</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Natural Language Processing">Natural Language Processing</option>
+                    <option value="Computer Vision">Computer Vision</option>
+                    <option value="DevOps">DevOps</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="Docker">Docker</option>
+                    <option value="Kubernetes">Kubernetes</option>
+                    <option value="Git">Git</option>
+                    <option value="Agile Methodologies">Agile Methodologies</option>
+                    <option value="Scrum">Scrum</option>
+                    <option value="Kanban">Kanban</option>
+                    <option value="Jira">Jira</option>
+                    <option value="CI/CD">CI/CD</option>
+                    <option value="Testing">Testing</option>
+                    <option value="Front-end Frameworks">Front-end Frameworks</option>
+                    <option value="Back-end Frameworks">Back-end Frameworks</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Wireframing">Wireframing</option>
+                    <option value="Prototyping">Prototyping</option>
+                    <option value="User Research">User Research</option>
+                    <option value="User Testing">User Testing</option>
+                    <option value="Information Architecture">Information Architecture</option>
+                    <option value="Interaction Design">Interaction Design</option>
+                    <option value="Visual Design">Visual Design</option>
+                    <option value="Content Management Systems">Content Management Systems</option>
+                    <option value="E-commerce Platforms">E-commerce Platforms</option>
+                    <option value="SEO">SEO</option>
+                    <option value="Social Media Marketing">Social Media Marketing</option>
+                    <option value="Content Marketing">Content Marketing</option>
+                    <option value="Email Marketing">Email Marketing</option>
+                    <option value="Analytics">Analytics</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Network Administration">Network Administration</option>
+                    <option value="Ethical Hacking">Ethical Hacking</option>
+                    <option value="Penetration Testing">Penetration Testing</option>
+                    <option value="Information Security">Information Security</option>
+                </select>
+                <button type="submit" class="save">Save</button>
+                <input type="hidden" id="apiUrl" value="https://profile-api-2wkq.onrender.com/profile">-->
+                <button type="submit" class="save">Save</button>
+                <input type="hidden" id="apiUrl" value="https://profile-api-2wkq.onrender.com/profile">
+            </form>
+
+            <div class="showskills">
+                <p id="showskil" ></p>
+            </div>
+                
+        </div>
+    </div>
+
+    <script src="./profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve user data from localStorage
+
+            const email = JSON.parse(localStorage.getItem('email'));
+            const fname = JSON.parse(localStorage.getItem('name'));
+            console.log(email, fname);
+
+            // Select the first name and last name input elements
+            const firstNameInput = document.querySelector(".fn input");
+            // const lastNameInput = document.querySelector(".ln input");
+            const emailinput = document.querySelector(".email input");
+            const contactNumberElement = document.querySelector(".cn input");
+            const organizationElement = document.querySelector(".orga input");
+            //const genderElements = document.querySelectorAll(".genra");
+            const courseElements = document.querySelectorAll(".coursebox input");
+            const specializationElement = document.querySelector(".sp input");
+
+            // Populate the input fields with user data
+            firstNameInput.value = fname;
+
+            emailinput.value = email;
+        });
+    </script>
+</body>
+
+</html>

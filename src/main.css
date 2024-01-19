@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Agbalumo&family=Habibi&family=Pacifico&family=Laila:wght@400;500;600;700&family=Podkova:wght@500&family=Poppins&family=Roboto:wght@100&family=Space+Grotesk:wght@500&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: azure;
+  /* Add the following line to remove horizontal scroll */
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 100%;
+  height: 90px;
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  height: 60px;
+  background-image: url("./Assets/Group_8-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 40px;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fbb793;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+}
+
+.profile i {
+  font-size: 20px;
+  margin-left: 5px;
+}
+i {
+  transform: translateX(-2px);
+}
+
+.maincont {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("./Assets/black-abstract-background-with-overlapping-characteristics-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.webscrap {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(77, 75, 75, 0.105); /* Background color with opacity */
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.candj {
+  width: 100%;
+  height: 65%;
+  background-image: url("./Assets/black-abstract-background-with-overlapping-characteristics-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comp {
+  width: 180px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.comp:hover {
+  width: 190px;
+  height: 110px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.compimg {
+  width: 90%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.webscrap h1 {
+  font-family: Podkova;
+  color: #fbb793;
+}
+
+.candjbutton {
+  width: 300px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.candjbutton a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.func {
+  width: 180px;
+  height: 80px;
+  border: 2px solid #fbb793;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(77, 75, 75, 0.105); /* Background color with opacity */
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.func h4 {
+  color: #fbb793;
+  transition: all 0.3s ease;
+}
+.createlogo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createlogo i {
+  color: #fbb793;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+#create:hover {
+  width: 200px;
+  height: 100px;
+  border: 2px solid #fbb793;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(77, 75, 75, 0.105); /* Background color with opacity */
+  backdrop-filter: blur(10px);
+}
+
+#create:hover h4 {
+  font-size: 20px;
+}
+
+#join:hover {
+  width: 200px;
+  height: 100px;
+  border: 2px solid #fbb793;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(77, 75, 75, 0.105); /* Background color with opacity */
+  backdrop-filter: blur(10px);
+}
+
+#join:hover h4 {
+  font-size: 20px;
+}
+
+.myteams {
+  width: 800px;
+  height: 400px;
+  border-left: 2px solid #fbb793;
+  margin-top: 20px;
+  margin-right: 100px;
+  background-color: rgba(77, 75, 75, 0.105); /* Background color with opacity */
+  backdrop-filter: blur(3px);
+  padding: 20px;
+}
+
+.myteams .team-header {
+  display: flex;
+  align-items: center;
+  background-color: rgba(77, 75, 75, 0.105);
+  backdrop-filter: blur(3px);
+  border: 2px solid #fbb793;
+  border-radius: 20px;
+  width: 700px;
+  height: 50px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.myteams .team-header .team-name,
+.myteams .team-header .project-description {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  color: #fbb793;
+  border-right: 2px solid #fbb793;
+}
+
+.myteams .team-header .project-description {
+  border-right: none;
+}
+
+.myteams h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  margin-top: 10px;
+  color: #f8bd9d;
+  overflow: hidden;
+}
+.uppercontent{
+  display: flex;
+  text-align: center;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+
+.myteamsdetails {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 50px;
+}
+.myteams .teamshow {
+  width: 700px;
+  height: 80px;
+  border: 2px solid #fbb793;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; /* Add padding for better alignment */
+  cursor: pointer;
+}
+
+.myteams .teamshow:hover {
+  width: 740px;
+  height: 90px;
+  border: 2px solid #fbb793;
+  margin-top: 20px;
+}
+
+.myteams .teamshow h6 {
+  margin: 0;
+  font-size: 20px;
+  color: #fbb793; /* Increase font size for team name */
+}
+
+.myteams .teamshow p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #fbb793; /* Adjust font size for project description */
+}
+
+.myteams .showmore {
+  width: 720px;
+  height: 25px;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.myteams .showmore h6,
+.myteams .showmore a {
+  margin-top: 5px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.myteams .teamshow .team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70%; /* Adjust the width to your preference */
+  padding: 10px;
+}
+
+.myteams .teamshow .team-info h6 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fbb793;
+}
+
+.myteams .teamshow .team-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.profilebox {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  background-color: rgba(77, 75, 75, 0.105); /* Background color with opacity */
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profilebox .box2 {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 9px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.profilebox .box2:hover {
+  font-size: 23px;
+  background-color: #fbb793;
+}
+
+.profilebox {
+  display: none;
+}
+
+/* Add these CSS styles to your stylesheet */
+.comp {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.comp img {
+  width: 100%;
+  height: auto;
+}
+
+.comp p {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer span{
+    color: #fbb793;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #fbb793;
+}

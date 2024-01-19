@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GatherGrid</title>
+    <link rel="stylesheet" href="Create.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./multichoose.css">
+</head>
+
+<body>
+    <div id="titlebar" class="navbar">
+        <a href="./main.html">
+            <div class="logo"></div>
+        </a>
+        <div class="profile">
+            <a href="./profile.html" class="anch"><i class="fa-solid fa-user" style="color: #f0bb7f;"></i></a>
+        </div>
+    </div>
+
+    <div class="search">
+        <h3 class="joinhead">Create Team</h3>
+    </div>
+
+    <div class="maincont">
+
+        <form id="teamForm" action="http://localhost:1112/createTeam" method="post" class="allcont">
+
+            <div class="detailcont tn">
+                <label id="tname" for="team_name">Team Name:</label>
+                <input type="text" id="iptname" name="team_name" required>
+            </div>
+
+            <div class="detailcont tc">
+                <label id="team_id" for="team_id">Team Code:</label>
+                <input type="text" id="ipteam_id" name="team_id" readonly>
+            </div>
+
+            <div class="detailcont tl">
+                <label id="admin_name" for="team_admin_name">Team Admin Name:</label>
+                <input type="text" id="ipteam_admin_name" name="team_admin_name" required readonly>
+            </div>
+
+            <div class="detailcont tle">
+                <label id="admin_email" for="team_admin_email">Team Admin Email:</label>
+                <input type="text" id="ipteam_admin_email" name="team_admin_email" required readonly>
+            </div>
+
+            <div class="detailcont td">
+                <label id="description" for="about_team">Project Description:</label>
+                <textarea type="text" id="ipteam_description" name="about_team" required></textarea>
+            </div>
+
+            <div class="detailcont tmn">
+                <label id="strength" for="members">Number of Members (Max Limit:10):-</label>
+                <select id="ipstrength" name="members" required>
+                    <option value="null">Select Number</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+
+            <div class="detailcont ts">
+                <label id="ability" for="team_skills">Skills</label>
+                <input type="text" id="team_skill" name="team_skill" required>
+                <!-- <select id="team_skill" name="team_skill" required>
+                    <option value="" disabled selected>Select a Skill</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Communication">Communication</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C++">C++</option>
+                    <option value="C#">C#</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="PHP">PHP</option>
+                    <option value="SQL">SQL</option>
+                    <option value="React">React</option>
+                    <option value="Angular">Angular</option>
+                    <option value="Vue.js">Vue.js</option>
+                    <option value="Node.js">Node.js</option>
+                    <option value="Express.js">Express.js</option>
+                    <option value="Django">Django</option>
+                    <option value="Flask">Flask</option>
+                    <option value="Ruby on Rails">Ruby on Rails</option>
+                    <option value="ASP.NET">ASP.NET</option>
+                    <option value="Spring Framework">Spring Framework</option>
+                    <option value="Xamarin">Xamarin</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Kotlin">Kotlin</option>
+                    <option value="Dart">Dart</option>
+                    <option value="Go">Go</option>
+                    <option value="Rust">Rust</option>
+                    <option value="TypeScript">TypeScript</option>
+                    <option value="GraphQL">GraphQL</option>
+                    <option value="RESTful API Design">RESTful API Design</option>
+                    <option value="Responsive Web Design">Responsive Web Design</option>
+                    <option value="Mobile App Development">Mobile App Development</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Natural Language Processing">Natural Language Processing</option>
+                    <option value="Computer Vision">Computer Vision</option>
+                    <option value="DevOps">DevOps</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="Docker">Docker</option>
+                    <option value="Kubernetes">Kubernetes</option>
+                    <option value="Git">Git</option>
+                    <option value="Agile Methodologies">Agile Methodologies</option>
+                    <option value="Scrum">Scrum</option>
+                    <option value="Kanban">Kanban</option>
+                    <option value="Jira">Jira</option>
+                    <option value="CI/CD">CI/CD</option>
+                    <option value="Testing">Testing</option>
+                    <option value="Front-end Frameworks">Front-end Frameworks</option>
+                    <option value="Back-end Frameworks">Back-end Frameworks</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Wireframing">Wireframing</option>
+                    <option value="Prototyping">Prototyping</option>
+                    <option value="User Research">User Research</option>
+                    <option value="User Testing">User Testing</option>
+                    <option value="Information Architecture">Information Architecture</option>
+                    <option value="Interaction Design">Interaction Design</option>
+                    <option value="Visual Design">Visual Design</option>
+                    <option value="Content Management Systems">Content Management Systems</option>
+                    <option value="E-commerce Platforms">E-commerce Platforms</option>
+                    <option value="SEO">SEO</option>
+                    <option value="Social Media Marketing">Social Media Marketing</option>
+                    <option value="Content Marketing">Content Marketing</option>
+                    <option value="Email Marketing">Email Marketing</option>
+                    <option value="Analytics">Analytics</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Network Administration">Network Administration</option>
+                    <option value="Ethical Hacking">Ethical Hacking</option>
+                    <option value="Penetration Testing">Penetration Testing</option>
+                    <option value="Information Security">Information Security</option>
+                </select> -->
+            </div>
+
+            <button type="submit" class="create">Create</button>
+        </form>
+        <div id="preloader" class="preloader" style="display: none;">
+            <div class="loader"></div>
+        </div>
+
+        <div id="successPopup" class="success-popup">
+            <div class="popup-content">
+                <span id="closeButton" class="close-button">x</span>
+                <h2>Team Created Successfully</h2>
+                <!-- <p>Your team has been created successfully!</p> -->
+            </div>
+        </div>
+
+
+        <script>
+
+            const d = new Date();
+
+            // Simulated auto-generated Team ID
+            // document.getElementById("ipteam_id").value = Math.floor(Math.random() * 100000) + 1;
+            document.getElementById("ipteam_id").value = Date.now();
+
+
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Retrieve user data from localStorage
+                const email = JSON.parse(localStorage.getItem('email'));
+                const name = JSON.parse(localStorage.getItem('name'));
+                console.log(email);
+                // Select the first name and last name input elements
+                //const firstNameInput = document.querySelector(".fn input");
+                //const lastNameInput = document.querySelector(".ln input");
+                const emailinput = document.getElementById("ipteam_admin_email");
+                const nameinput = document.getElementById("ipteam_admin_name");
+
+                // Populate the input fields with user data
+                //firstNameInput.value = userData.firstName;
+                //lastNameInput.value = userData.lastName;
+                emailinput.value = email;
+                nameinput.value = name;
+            });
+        </script>
+        <script src="Create.js"></script>
+
+</body>
+
+</html>

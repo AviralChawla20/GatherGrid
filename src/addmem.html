@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GatherGrid</title>
+    <link rel="stylesheet" href="./addmem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="titlebar" class="navbar">
+        <a href="./main.html">
+            <div class="logo"></div>
+        </a>
+        <div class="profile">
+            <a href="./profile.html"><i class="fa-solid fa-user" style="color: #f0bb7f;"></i></a>
+        </div>
+    </div>
+
+
+    <div class="teamdetails">
+        <h3 class="head">Team Info</h3>
+        <div class="outermain">
+            <div class="innermain">
+                <div class="detailcont tn">
+                    <span>Team Name</span>
+                    <input type="text" class="team_names" readonly>
+                </div>
+
+                <div class="detailcont tc">
+                    <span>Team Code</span>
+                    <input type="text" class="Team_Code" readonly>
+                </div>
+
+                <div class="detailcont td">
+                    <span>Team Discription</span>
+                    <textarea type="text" class="team_disc"></textarea>
+                </div>
+
+                <div class="buttonchat">
+                    <button class="chat-btn" id="chat-btn"><a href="http://localhost:3000"
+                            target="_blank">Chat</a></button>
+                </div>
+            </div>
+
+            <div class="innermain2">
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="profilebox">
+        <div class="box2">
+            <a href="profile.html#Binfo">Basic Information</a>
+        </div>
+        <div class="box2">
+            <a href="profile.html#SKILLS">Skills</a>
+        </div>
+        <div class="box2">
+            <a href="profile.html#Others">Others</a>
+        </div>
+        <div class="box2">
+            <a href="landing.html">Log Out</a>
+        </div>
+    </div>
+    </div>
+
+    <script src="addmem.js"></script>
+
+</body>
+
+</html>

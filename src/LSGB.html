@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./LSGB.CSS">
+    <title>Log In</title>
+</head>
+
+<body>
+    <div id="titlebar" class="navbar">
+        <a href="./landing.html">
+            <div class="logo"></div>
+        </a>
+    </div>
+
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <a href="./landing.html"><ion-icon name="close"></ion-icon></a>
+        </span>
+        <div class="form-box login">
+            <h2>Welcome</h2>
+            <form id="login" action="https://sign-in-api.onrender.com/signin">
+                <div class="input-box message" id="loginmsg" style="display:none">
+                    <label>log in successful !</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" id="loginEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="loginPassword" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" id="rememberPassword">Remember me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Signup</a></p>
+                </div>
+                <input type="hidden" id="loginApiUrl" value="https://sign-in-api.onrender.com/signin">
+            </form>
+        </div>
+
+
+        <div class="form-box register">
+            <h2>Hello </h2>
+            <form id="signup" action="https://goapi-18xj.onrender.com/users">
+                <div class="input-box message" id="Signupmsg" style="display:none">
+                    <label>This Email is already registered !</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="name" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" id="terms" required><a
+                            href="https://www.termsandconditionsgenerator.com/live.php?token=mL1v3nfUrHjGMb7TEA9kRxRXr41YYECY">I
+                            agree to terms
+                            and conditions.</a></label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+                <input type="hidden" id="apiUrl" value="https://goapi-18xj.onrender.com/users">
+            </form>
+        </div>
+    </div>
+
+    <div class="overlay" id="otpOverlay">
+        <div class="overlay-content">
+          <h2>Enter OTP</h2>
+          <input type="text" id="otpInput" maxlength="6" placeholder="Enter OTP" />
+          <button id="submitOTP">Submit OTP</button>
+        </div>
+      </div>
+    <div class="page-overlay" id="pageOverlay" style="display: none"></div>
+
+    <div id="preLoader" class="preloader" style="display: none">
+        <div class="loader"></div>
+    </div>
+
+
+    <script src="./LSGB.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Team</title>
+    <link rel="stylesheet" href="join.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="titlebar" class="navbar">
+        <a href="./main.html">
+            <div class="logo"></div>
+        </a>
+        
+
+
+        <div class="searchbar">
+            <input type="search" id="ipteam_codes" name="team_codes" class="searching" required placeholder="Find a Team">
+        </div>
+        <div id="search-results" class="search-results"></div>
+
+        <div class="profile">
+            <a href="./profile.html" class="anch"><i class="fa-solid fa-user" style="color: #f0bb7f;"></i></a>
+        </div>
+    </div>
+    <div class="search">
+        <h3 class="joinhead">Join Team</h3>
+        <div class="right">
+            <form id="joinTeamForm" action="https://team-xj4n.onrender.com/join_team" method="post" class="allcont">
+                <!-- Move the closing </form> tag inside the form element -->
+                <input type="text" id="ipteam_code" name="team_code" class="teamcode" required
+                    placeholder="Enter Team Code">
+                <input type="email" id="ipuser_email" name="user_email" class="teamcode" required
+                    placeholder="Enter Email">
+                <button type="submit" class="create">Join</button>
+                <div id="successMessage" class="success-message" style="display: none;"></div>
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+            </form>
+        </div>
+        
+    </div>
+
+    <div id="recommendedTeamsContainer" class="recommended-teams-container">
+        <h3 class="recommended-teams-heading">Recommended Teams</h3>
+        <div id="recommendedTeams" class="recommended-teams"></div>
+    </div>
+
+    <div id="preloader" class="preloader" style="display: none;">
+        <div class="loader"></div>
+    </div>
+
+    <div id="successPopup" class="success-popup">
+        <div class="popup-content">
+            <span id="closeButton" class="close-button">×</span>
+            <h2>Successfully joined the team!</h2>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve user data from localStorage
+            const email = JSON.parse(localStorage.getItem('email'));
+            const name = JSON.parse(localStorage.getItem('name'));
+            console.log(email);
+            // Select the first name and last name input elements
+            //const firstNameInput = document.querySelector(".fn input");
+            //const lastNameInput = document.querySelector(".ln input");
+            const emailinput = document.getElementById("ipuser_email");
+            //const nameinput=document.getElementById("ipteam_admin_");
+
+            // Populate the input fields with user data
+            //firstNameInput.value = userData.firstName;
+            //lastNameInput.value = userData.lastName;
+            emailinput.value = email;
+            // nameinput.value=name;
+        });
+    </script>
+    <script src="join.js"></script>
+</body>
+
+</html>
